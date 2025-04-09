@@ -1,4 +1,4 @@
-	# 🎯 Crash Predictor (Crash Scanner)
+# 🎯 Crash Predictor (Crash Scanner)
 
 This is a lightweight JavaScript program that monitors the 1xBet Crash Game in real time and predicts potential crash outcomes based on betting behavior.
 
