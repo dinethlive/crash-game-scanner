@@ -67,3 +67,4 @@ This project is licensed under the MIT License. Feel free to use, modify, and sh
 
 Pull requests and suggestions are welcome.  
 If you have ideas to improve logic, visualization, or automation, feel free to contribute!
+
