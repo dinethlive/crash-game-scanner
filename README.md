@@ -1,69 +1,67 @@
-# 🎯 Crash Predictor (Crash Scanner)
+# Crash Point Signal Pro v3
 
-This is a lightweight JavaScript program that monitors the 1xBet Crash Game in real time and predicts potential crash outcomes based on betting behavior.
+Advanced pattern-based betting signals for Crash Point (Game 601) with latency analysis, tick leak detection, and smart risk scoring.
 
-![Crash Predictor Demo](images/crash-predictor-demo.png)
+![Crash Point Signal Pro Interface](images/crash-point-scanner-ss-1.png)
 
----
-
-## 🔍 What It Does
-
-- Detects new rounds automatically
-- Tracks player count and total bets during growth
-- Waits until player count freezes (no growth for 2 seconds)
-- Applies a **60% rule** to calculate a predicted crash cap
-- Compares it against the **total winnings**
-- Logs `✅ SUCCESS` if actual winnings are below the predicted cap, or `❌ FAILURE` if they exceed
-- Runs infinitely and automatically across game sessions
+> ⚠️ **Note:** The old version (v1) has been moved to [`legacy-README.md`](legacy-README.md). That version is no longer maintained or functional.
 
 ---
 
-## 💡 Why the 60% Rule?
+## Quick Overview
 
-Based on observed patterns and common game design in crash-style betting games, platforms like 1xBet often seem to **limit payout liquidity** to ensure profit margins.  
-This script assumes that total winnings in a round **typically won’t exceed 60% of total bets**, based on this kind of internal control logic.
+**Crash Point Signal Pro** is a sophisticated userscript that intercepts WebSocket traffic on Melbet's Crash Point game (Game 601) to analyze network-level patterns and provide intelligent betting signals. The system uses multiple detection strategies to identify impending crashes before they occur.
 
-You can adjust this threshold in the code to suit your own experiments.
+For **detailed documentation** on all features, patterns, and configuration options, please refer to the main repository:
 
-```js
-const predictedCrash = Math.floor(totalBets * 0.6); // Change 0.6 to your own ratio
-```
+**[📚 Full Documentation →](https://github.com/dinethlive/crash-point-scanner.git)**
 
----
+### Supported URLs
 
-## 🛠️ How to Run This Program
-
-1. Open the [1xBet Crash Game](https://ind.1xbet.com/games-frame/games/371) in your browser
-2. Right-click anywhere on the page → Click **Inspect**
-3. Go to the **Console** tab
-4. Copy the full contents of `crashPredictor.js` from this repository
-5. Paste the code into the console and press **Enter**
-6. Then type and run the main function:
-
-```js
-startCrashPredictionLoop();
-```
-
-You will now see live predictions and round results printed directly in the console.
+- `https://melbet-srilanka.com/games-frame/games/601*`
+- `https://*.melbet*.com/games-frame/games/601*`
 
 ---
 
-## ⚠️ Disclaimer
+## Key Features
 
-This tool is provided **for educational and analytical purposes only**.
-
-We do **not encourage or promote gambling** in any form.  
-Gambling can be addictive and harmful. Please act responsibly and in accordance with your local laws.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. Feel free to use, modify, and share it with attribution.
+| Feature | Description |
+|---------|-------------|
+| **Network Pattern Detection** | 6 distinct patterns to detect imminent crashes |
+| **Risk Scoring (0-100)** | Pre-round risk assessment with multiple factors |
+| **Real-Time Alerts** | CASH OUT NOW warnings when patterns trigger |
+| **Live Statistics** | Delta time, consecutive profits, streak tracking |
+| **History Tracking** | Last 20 crash values with accuracy tracking |
 
 ---
 
-## ✨ Contributions
+## Installation
 
-Pull requests and suggestions are welcome.  
-If you have ideas to improve logic, visualization, or automation, feel free to contribute!
+1. Install a userscript manager (Tampermonkey, Greasemonkey, or Violentmonkey)
+2. Create a new userscript
+3. Paste the contents of `crash-point-scanner.js`
+4. Save and navigate to a supported Melbet Crash Point URL
+5. The signal panel will appear in the top-right corner
+
+---
+
+## Usage Guidelines
+
+- **Wait for Data:** Allow at least 3 rounds for the system to gather sufficient data
+- **Trust P1 Pattern:** Tick leak indicator is the most reliable — cash out immediately when triggered
+- **Default to OBSERVE:** System defaults to OBSERVE, not BET
+
+---
+
+## License
+
+This software is proprietary and licensed under the **Crash Point Signal Pro License**. See the [LICENSE](LICENSE) file for full terms and conditions.
+
+- **Personal Use Only** - For educational and analytical purposes
+- **No Commercial Use** - Redistribution is strictly prohibited
+
+---
+
+## Disclaimer
+
+This tool is for educational and analytical purposes only. Gambling involves financial risk. Use responsibly at your own discretion.
