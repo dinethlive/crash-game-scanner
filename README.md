@@ -123,11 +123,12 @@ graph TB
 ### Steps
 
 1. Install one of the userscript managers listed above.
-2. Open the extension and create a **new userscript**.
-3. Paste the full contents of `crash-point-scanner.js` into the editor.
-4. **Save** the script.
-5. Navigate to any [supported Melbet Crash Point URL](#supported-platforms).
-6. The signal panel will appear automatically in the **top-right corner** of the page.
+2. Get the latest `crash-point-scanner.js` from the **[Full Documentation Repository](https://github.com/dinethlive/crash-point-scanner.git)**.
+3. Open the extension and create a **new userscript**.
+4. Paste the full contents of `crash-point-scanner.js` into the editor.
+5. **Save** the script.
+6. Navigate to any [supported Melbet Crash Point URL](#supported-platforms).
+7. The signal panel will appear automatically in the **top-right corner** of the page.
 
 ---
 
@@ -237,5 +238,5 @@ Users must comply with Melbet's Terms of Service and all applicable local laws a
 ---
 
 <p align="center">
-  <sub>Copyright &copy; 2024 &mdash; All Rights Reserved</sub>
+  <sub>Copyright &copy; 2026 &mdash; All Rights Reserved</sub>
 </p>
